@@ -1,0 +1,6 @@
+deploy:
+    command:
+        - 'init:directories'
+    directories:
+        - { path: 'logs' ,  permission: '0777' }
+        - { path: 'public', permission: '0777' }
