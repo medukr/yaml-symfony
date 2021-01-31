@@ -23,7 +23,7 @@ class Config
     {
         if (!static::$config){
             foreach (static::$path as $item) {
-                static::$config = array_merge(static::$config, Yaml::parseFile(__DIR__ ."/$item.yml"));
+                static::$config = array_merge(static::$config, Yaml::parseFile(__DIR__ ."/$item.yml", Yaml::PARSE_DATETIME));
             }
         }
         return static::$config;
